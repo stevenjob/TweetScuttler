@@ -1,0 +1,15 @@
+h1 {
+    color: hotpink;
+    font-size: 50px;
+}
+
+h1:hover {
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+}
+
+@keyframes example {
+    from {color: hotpink;}
+    to {color: #806E28;}
+}
