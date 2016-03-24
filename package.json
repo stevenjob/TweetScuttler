@@ -1,7 +1,7 @@
 {
   "name": "tweet-scuttler",
   "version": "0.0.1",
-  "description": "Scuttling tweets at lightening speed",
+  "description": "Scuttling tweets at lightning speed",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
