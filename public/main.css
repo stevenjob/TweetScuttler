@@ -3,13 +3,12 @@ html {
 }
 
 body {
-    display: flex;
     height: 100%;
 }
 
 h1 {
     color: hotpink;
-    font-size: 500px;
+    font-size: 50px;
     margin: auto;
 }
 
@@ -22,4 +21,25 @@ h1:hover {
 @keyframes example {
     from {color: hotpink;}
     to {color: #806E28;}
+}
+
+#console {
+    height: 400px;
+    overflow: auto;
+}
+
+.username-msg {
+    color: orange;
+}
+
+.connect-msg {
+    color: green;
+}
+
+.disconnect-msg {
+    color: red;
+}
+
+.send-msg {
+    color: #888
 }
