@@ -17,7 +17,7 @@ module.exports = {
         loaders: [                  // list of loaders (where you put things which transform your code)
             {
                 test: /\.js$/,
-                include: path.join(__dirname, 'src/assets/js'),
+                include: path.join(__dirname, 'src/assets/main/js'),
                 loader: 'babel-loader',
                 query: {
                     presets: ["es2015"]
@@ -27,7 +27,7 @@ module.exports = {
     },
     debug: true,
     devServer: {
-        contentBase: "./src",
+        contentBase: "./src/main/assets/",
         port: 80
     }
 };

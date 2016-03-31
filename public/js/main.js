@@ -7785,8 +7785,6 @@
 	    socket.disconnect();
 	}
 	
-	console.log('hello');
-	
 	function sendMessage() {
 	    var message = $('#msg').val();
 	    $('#msg').val('');
