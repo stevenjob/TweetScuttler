@@ -18,9 +18,6 @@ public class ServerRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         server.start();
-        //TODO need to fix this cant just wait for a while then kill the server
-        Thread.sleep(Integer.MAX_VALUE);
-        server.stop();
     }
 
 }
