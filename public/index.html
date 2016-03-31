@@ -3,9 +3,6 @@
     <head>
         <meta charset="utf-8"/>
         <title>Demo Chat</title>
-        <script src="js/socket.io/socket.io.js"></script>
-        <script src="js/moment.min.js"></script>
-        <script src="js/jquery-1.7.2.min.js"></script>
         <link href="main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -15,11 +12,11 @@
 
         <form onsubmit="return false;">
             <input id="msg" type="text" placeholder="Type something..."/>
-            <button type="button" onClick="sendMessage()" id="send">Send</button>
-            <button type="button" onClick="sendDisconnect()" >Disconnect</button>
+            <button type="button" id="send">Send</button>
+            <button type="button" id="disconnect">Disconnect</button>
         </form>
 
-        <script src="js/main.js"></script>
+        <script src="/js/main.js"></script>
 
     </body>
 </html>

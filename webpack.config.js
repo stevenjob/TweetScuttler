@@ -8,8 +8,8 @@ module.exports = {
         'webpack-dev-server/client?http://localhost:80'
     ],
     output: {                       // where to serve compiled files from
-        publicPath: '/',
-        path: path.join(__dirname, 'public/js'),
+        publicPath: '/js/',
+        path: 'public/js/',
         filename: 'main.js'
     },
     devtool: 'source-map',          // serve the source
@@ -27,6 +27,7 @@ module.exports = {
     },
     debug: true,
     devServer: {
-        contentBase: "./src"
+        contentBase: "./src",
+        port: 80
     }
 };

@@ -1,6 +1,14 @@
+var io = require('socket.io-client');
+var $ = require('jquery');
+var moment = require('moment');
+
 var userName = 'user' + Math.floor((Math.random() * 1000) + 1);
 
 var socket = io.connect('http://localhost:9092');
+
+// Buttons
+var sendButton = document.getElementById('send');
+var disconnectButton = document.getElementById('disconnect');
 
 socket.on('connect', function () {
     output('<span class="connect-msg">Client has connected to the server!</span>');
@@ -34,6 +42,11 @@ function output(message) {
     var element = $("<div>" + currentTime + " " + message + "</div>");
     $('#console').prepend(element);
 }
+
+
+// Add event listeners to buttons
+sendButton.addEventListener('click', sendMessage);
+disconnectButton.addEventListener('click', sendDisconnect);
 
 $(document).keydown(function (e) {
     if (e.keyCode == 13) {
