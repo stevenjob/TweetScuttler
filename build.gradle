@@ -6,6 +6,7 @@ buildscript {
         classpath("org.scala-lang:scala-library:2.11.7")
         classpath('org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE')
         classpath('com.corundumstudio.socketio:netty-socketio:1.7.10')
+        classpath('com.twitter:hbc-core:2.2.0')
     }
 }
 
@@ -27,6 +28,7 @@ dependencies {
     compile("org.scala-lang:scala-library:2.11.7")
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('com.corundumstudio.socketio:netty-socketio:1.7.10')
+    compile('com.twitter:hbc-core:2.2.0')
     testCompile('junit:junit')
 }
 
