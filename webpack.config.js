@@ -5,7 +5,7 @@ module.exports = {
     entry: [                        // files to run at startup (points are where self-contained scripts go)
         'babel-polyfill',
         './src/main/assets/js/main.js',
-        'webpack-dev-server/client?http://localhost:8080'
+        'webpack-dev-server/client?http://localhost:80'
     ],
     output: {                       // where to serve compiled files from
         publicPath: '/',
