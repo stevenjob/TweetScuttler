@@ -6,6 +6,11 @@
 *.iml
 build/
 
+out
+*.ipr
+*.iws
+.DS_Store
+
 # sbt specific
 .cache
 .history
@@ -22,7 +27,7 @@ project/plugins/project/
 .worksheet
 
 # Gradle
-.gradle/
+.gradle
 
 # Frontend
 node_modules/

@@ -16,7 +16,7 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-rest-service'
+    baseName = 'tweetscuttler-poc'
     version = '0.1.0'
 }
 
@@ -32,6 +32,10 @@ dependencies {
     testCompile('junit:junit')
 }
 
+task stage {
+    dependsOn build
+}
+
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.12'
 }

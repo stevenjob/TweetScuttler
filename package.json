@@ -2,7 +2,6 @@
   "name": "tweet-scuttler",
   "version": "0.0.1",
   "description": "Scuttling tweets at lightning speed",
-  "main": "main.js",
   "dependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
