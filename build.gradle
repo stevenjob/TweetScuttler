@@ -1,3 +1,5 @@
+group 'TR-TweetScuttler'
+
 buildscript {
     repositories {
         mavenCentral()
@@ -13,6 +15,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'idea'
+apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
 
 jar {
@@ -20,15 +23,21 @@ jar {
     version = '0.1.0'
 }
 
+task debug << {
+    println "java.home is " + System.properties['java.home']
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+
     compile("org.scala-lang:scala-library:2.11.7")
+    compile("org.scala-lang:scala-library:2.11.1")
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('com.corundumstudio.socketio:netty-socketio:1.7.10')
     compile('com.twitter:hbc-core:2.2.0')
+    compile('com.corundumstudio.socketio:netty-socketio:1.7.10')
     testCompile('junit:junit')
 }
 

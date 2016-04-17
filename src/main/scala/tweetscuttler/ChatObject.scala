@@ -20,3 +20,12 @@ class ChatObject {
     message = s
   }
 }
+
+object ChatObject {
+  def apply(userName: String, message: String): ChatObject = {
+    var obj = new ChatObject
+    obj.userName = userName
+    obj.message = message
+    obj
+  }
+}
