@@ -29,5 +29,11 @@ project/plugins/project/
 # Gradle
 .gradle
 
+# Eclipse
+.project
+.cache-main
+.settings/
+
 # Frontend
 node_modules/
+/bin/
