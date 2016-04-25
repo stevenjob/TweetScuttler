@@ -38,7 +38,7 @@ function sendMessage() {
 }
 
 function output(message) {
-    var currentTime = "<span class='time'>" + moment().format('HH:mm:ss.SSS') + "</span>";
+    var currentTime = "<span class='time'>" + moment().format('HH:mm:ss') + "</span>";
     var element = $("<div>" + currentTime + " " + message + "</div>");
     $('#console').prepend(element);
 }
@@ -46,7 +46,7 @@ function output(message) {
 
 // Add event listeners to buttons
 sendButton.addEventListener('click', sendMessage);
-disconnectButton.addEventListener('click', sendDisconnect);
+//disconnectButton.addEventListener('click', sendDisconnect);
 
 $(document).keydown(function (e) {
     if (e.keyCode == 13) {
