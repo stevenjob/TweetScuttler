@@ -7,7 +7,7 @@ var userName = 'user' + Math.floor((Math.random() * 1000) + 1);
 var socket = io.connect('http://localhost:9092');
 
 // Buttons
-var sendButton = document.getElementById('send');
+let sendButton = document.getElementById('send');
 var disconnectButton = document.getElementById('disconnect');
 
 socket.on('connect', function () {

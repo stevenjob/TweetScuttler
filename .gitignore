@@ -1,6 +1,8 @@
 *.class
 *.log
 
+public/
+
 # intellij
 .idea/
 *.iml
