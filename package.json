@@ -37,7 +37,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "prod": "webpack && cp src/main/assets/index.html public/index.html"
+    "prod": "webpack"
   },
   "repository": {
     "type": "git",

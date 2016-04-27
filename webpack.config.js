@@ -4,8 +4,10 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: [                        // files to run at startup (points are where self-contained scripts go)
+        'babel-polyfill',
         './src/main/assets/js/main.js',
         './src/main/assets/styles/main.scss',
+        './src/main/assets/index.html',
         'webpack-dev-server/client?http://localhost:80'
     ],
     output: {                       // where to serve compiled files from
@@ -15,13 +17,6 @@ module.exports = {
     },
     devtool: 'source-map',          // serve the source
     module: {
-        // preLoaders: [
-        //     {
-        //         test: /\.js$/,
-        //         loaders: ['jshint'],
-        //         include: path.resolve(__dirname, 'src/main/assets/js/')
-        //     }
-        // ],
         loaders: [                  // list of loaders (where you put things which transform your code)
             {
                 test: /\.js$/,
@@ -31,6 +26,11 @@ module.exports = {
                 query: {
                     presets: ["es2015"]
                 }
+            },
+            {
+                test: /\.html$/,
+                include: path.resolve(__dirname, 'src/main/assets/'),
+                loader: 'file-loader?name=[name].[ext]'
             },
             {
                 test: /\.scss$/,
