@@ -46,7 +46,7 @@
   "keywords": [
     "Scuttling"
   ],
-  "author": "JArnstein",
+  "author": "JArnstein © 200BC to (new Date().getFullYear() + 1)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stevenjob/TweetScuttler/issues"
