@@ -35,7 +35,6 @@ import twitter4j._
     this.server = server
   }
 
-
   def sendStatus(status: Status) = {
     val user = status.getUser.getName
     val text = status.getText

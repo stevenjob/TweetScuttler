@@ -11,7 +11,8 @@ buildscript {
         classpath('com.twitter:hbc-core:2.2.0')
         classpath('org.twitter4j:twitter4j-stream:4.0.4')
         classpath('com.corundumstudio.socketio:netty-socketio:1.7.10')
-        classpath ('org.springframework:springloaded:1.2.5.RELEASE')
+        classpath('org.springframework:springloaded:1.2.5.RELEASE')
+        classpath('com.moowork.gradle:gradle-node-plugin:0.12')
     }
 }
 
@@ -20,6 +21,7 @@ apply plugin: 'scala'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
+apply plugin: 'com.moowork.node'
 
 jar {
     baseName = 'tweetscuttler-poc'
@@ -55,3 +57,9 @@ task stage {
     dependsOn build
 }
 
+//This task runs webpack to bundle the frontend to the package folder
+task runWebpack(type: NpmTask) {
+    args = ['run', 'bundle']
+}
+bootRun.dependsOn runWebpack
+runWebpack.dependsOn npm_install
