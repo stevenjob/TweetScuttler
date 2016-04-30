@@ -3,6 +3,7 @@ group 'TR-TweetScuttler'
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.scala-lang:scala-library:2.11.7")
@@ -10,6 +11,7 @@ buildscript {
         classpath('com.twitter:hbc-core:2.2.0')
         classpath('org.twitter4j:twitter4j-stream:4.0.4')
         classpath('com.corundumstudio.socketio:netty-socketio:1.7.10')
+        classpath ('org.springframework:springloaded:1.2.5.RELEASE')
     }
 }
 
@@ -24,12 +26,20 @@ jar {
     version = '0.1.0'
 }
 
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
 task debug << {
     println "java.home is " + System.properties['java.home']
 }
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
