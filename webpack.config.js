@@ -1,14 +1,13 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
     entry: [                        // files to run at startup (points are where self-contained scripts go)
         'babel-polyfill',
-        './src/main/assets/js/main.js',
+        './src/main/assets/scripts/main.jsx',
         './src/main/assets/styles/main.scss',
-        './src/main/assets/index.html',
-        'webpack-dev-server/client?http://localhost:80'
+        'webpack-dev-server/client?http://localhost:80',
+        'webpack/hot/only-dev-server'
     ],
     output: {                       // where to serve compiled files from
         publicPath: '/',
@@ -19,13 +18,10 @@ module.exports = {
     module: {
         loaders: [                  // list of loaders (where you put things which transform your code)
             {
-                test: /\.js$/,
+                test: /\.jsx$/,
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, 'src/main/assets/js'),
-                loader: 'babel',
-                query: {
-                    presets: ["es2015"]
-                }
+                include: path.resolve(__dirname, 'src/main/assets/scripts'),
+                loaders: ['react-hot', 'babel']
             },
             {
                 test: /\.html$/,
@@ -35,12 +31,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 include: path.resolve(__dirname, 'src'),
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
+                loader: "style!css!autoprefixer!sass"
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("style.css", {allChunks: false})
+        new webpack.HotModuleReplacementPlugin()
     ],
     debug: true,
     devServer: {
