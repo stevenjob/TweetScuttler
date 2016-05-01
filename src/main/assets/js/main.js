@@ -2,7 +2,7 @@ var io = require('socket.io-client');
 var $ = require('jquery');
 var moment = require('moment');
 
-var userName = 'user' + Math.floor((Math.random() * 1000) + 1);
+var username = 'user' + Math.floor((Math.random() * 1000) + 1);
 
 var socket = io.connect('http://localhost:9092');
 
@@ -15,7 +15,7 @@ socket.on('connect', function () {
 });
 
 socket.on('chatevent', function (data) {
-    output('<span class="username-msg">' + data.userName + ':</span> ' + data.message);
+    output('<span class="username-msg">' + data.username + ':</span> ' + data.message);
 });
 
 socket.on('disconnect', function () {
@@ -31,7 +31,7 @@ function sendMessage() {
     $('#msg').val('');
 
     var jsonObject = {
-        userName: userName,
+        username: username,
         message: message
     };
     socket.emit('chatevent', jsonObject);
@@ -42,7 +42,6 @@ function output(message) {
     var element = $("<div>" + currentTime + " " + message + "</div>");
     $('#console').prepend(element);
 }
-
 
 // Add event listeners to buttons
 sendButton.addEventListener('click', sendMessage);

@@ -1,15 +1,15 @@
 package tweetscuttler
 
 class ChatObject {
-  private var userName: String = _
+  private var username: String = _
   private var message: String = _
 
-  def getUserName: String = {
-    userName
+  def getUsername: String = {
+    username
   }
 
-  def setUserName(s: String) {
-    userName = s
+  def setUsername(s: String) {
+    username = s
   }
 
   def getMessage: String = {
@@ -22,9 +22,9 @@ class ChatObject {
 }
 
 object ChatObject {
-  def apply(userName: String, message: String): ChatObject = {
-    var obj = new ChatObject
-    obj.userName = userName
+  def apply(username: String, message: String): ChatObject = {
+    val obj = new ChatObject
+    obj.username = username
     obj.message = message
     obj
   }

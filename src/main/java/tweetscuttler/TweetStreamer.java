@@ -6,6 +6,7 @@ import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
+
 public final class TweetStreamer {
     private TwitterStream twitterStream;
     private FilterQuery filter;
