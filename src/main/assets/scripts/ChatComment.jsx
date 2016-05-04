@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class ChatComment extends Component {
-    render() {
-        return (
-            <div className="comment">
-                <h2 className="commentUsername">
-                    {this.props.username}
-                </h2>
-                {this.props.children}
-            </div>
-        )
-    }
-}
+const ChatComment = (props) => (
+  <div className="comment">
+    <h2 className="commentUsername">
+      {props.username}
+    </h2>
+    {props.children}
+  </div>
+);
+
+ChatComment.propTypes = {
+  username: React.PropTypes.string.isRequired,
+  children: React.PropTypes.element,
+};
+
+export default ChatComment;
