@@ -6,6 +6,7 @@ module.exports = {
         'babel-polyfill',
         './src/main/assets/scripts/main.jsx',
         './src/main/assets/styles/main.scss',
+        './src/main/assets/index.html',
         'webpack-dev-server/client?http://localhost:80',
         'webpack/hot/only-dev-server'
     ],
