@@ -7,7 +7,7 @@ module.exports = {
         './src/main/assets/scripts/main.jsx',
         './src/main/assets/styles/main.scss',
         './src/main/assets/index.html',
-        'webpack-dev-server/client?http://localhost:80',
+        'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server'
     ],
     output: {                       // where to serve compiled files from
@@ -19,7 +19,7 @@ module.exports = {
     module: {
         loaders: [                  // list of loaders (where you put things which transform your code)
             {
-                test: /\.jsx$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 include: path.resolve(__dirname, 'src/main/assets/scripts'),
                 loaders: ['react-hot', 'babel']
@@ -42,6 +42,6 @@ module.exports = {
     debug: true,
     devServer: {
         contentBase: "./src/main/assets/",
-        port: 80
+        port: 3000
     }
 };
