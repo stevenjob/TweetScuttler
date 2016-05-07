@@ -40,7 +40,7 @@ export default class ChatWindow extends Component {
 
   formSubmit = (text) => {
     socket.emit('chatevent', {
-      username: 'Jonny',
+      username: 'User',
       message: text,
     });
   }

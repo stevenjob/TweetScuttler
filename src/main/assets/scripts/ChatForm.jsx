@@ -5,7 +5,7 @@ export default class ChatForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { input: 'Type something...' };
+    this.state = {};
   }
 
   handleChange = (event) => {
@@ -23,11 +23,11 @@ export default class ChatForm extends Component {
     return (
       <form className="chatForm" onSubmit={this.handleSubmit}>
         <input
+          placeholder="Type something..."
           type="text"
           value={this.state.input}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Post" />
       </form>
     );
   }

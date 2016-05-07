@@ -2,9 +2,9 @@ import React from 'react';
 
 const ChatComment = (props) => (
   <div className="comment">
-    <h2 className="commentUsername">
-      {props.username}
-    </h2>
+    <span className="commentUsername">
+      {props.username}{': '}
+    </span>
     {props.children}
   </div>
 );

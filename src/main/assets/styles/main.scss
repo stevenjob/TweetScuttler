@@ -49,13 +49,13 @@ hr {
     padding-right: 0.9375rem;
 }
 
-#console {
+.chatCommentList {
     overflow: auto;
     margin-left: 2rem;
     margin-right: 2rem;
 }
 
-#console > div {
+.chatCommentList > div {
     margin-top: 1.5rem;
     line-height: 2rem;
 }
@@ -65,7 +65,7 @@ hr {
     letter-spacing: 2px;
 }
 
-.username-msg {
+.commentUsername {
     color: orange;
     font-weight: 600;
 }
@@ -90,10 +90,9 @@ form {
     text-align: center;
 }
 
-#msg {
+.chatForm input {
     text-align: center;
     height: 2.5rem;
     width: 40rem;
-    font-size: 20px;
     font: inherit;
 }

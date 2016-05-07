@@ -1,31 +1,34 @@
-group 'TR-TweetScuttler'
+group "TR-TweetScuttler"
 
 buildscript {
+    ext {
+        springBootVersion = "1.3.3.RELEASE"
+    }
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
         classpath("org.scala-lang:scala-library:2.11.7")
-        classpath('org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE')
-        classpath('com.twitter:hbc-core:2.2.0')
-        classpath('org.twitter4j:twitter4j-stream:4.0.4')
-        classpath('com.corundumstudio.socketio:netty-socketio:1.7.10')
-        classpath('org.springframework:springloaded:1.2.5.RELEASE')
-        classpath('com.moowork.gradle:gradle-node-plugin:0.12')
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("com.twitter:hbc-core:2.2.0")
+        classpath("org.twitter4j:twitter4j-stream:4.0.4")
+        classpath("com.corundumstudio.socketio:netty-socketio:1.7.10")
+        classpath("org.springframework:springloaded:1.2.5.RELEASE")
+        classpath("com.moowork.gradle:gradle-node-plugin:0.12")
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'scala'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
-apply plugin: 'com.moowork.node'
+apply plugin: "java"
+apply plugin: "scala"
+apply plugin: "idea"
+apply plugin: "eclipse"
+apply plugin: "spring-boot"
+apply plugin: "com.moowork.node"
 
 jar {
-    baseName = 'tweetscuttler-poc'
-    version = '0.1.0'
+    baseName = "tweetscuttler-poc"
+    version = "0.1.0"
 }
 
 idea {
@@ -36,7 +39,7 @@ idea {
 }
 
 task debug << {
-    println "java.home is " + System.properties['java.home']
+    println "java.home is " + System.properties["java.home"]
 }
 
 repositories {
@@ -46,11 +49,11 @@ repositories {
 
 dependencies {
     compile("org.scala-lang:scala-library:2.11.7")
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('com.twitter:hbc-core:2.2.0')
-    compile('org.twitter4j:twitter4j-stream:4.0.4')
-    compile('com.corundumstudio.socketio:netty-socketio:1.7.10')
-    testCompile('junit:junit')
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.twitter:hbc-core:2.2.0")
+    compile("org.twitter4j:twitter4j-stream:4.0.4")
+    compile("com.corundumstudio.socketio:netty-socketio:1.7.10")
+    testCompile("junit:junit")
 }
 
 task stage {
@@ -59,7 +62,7 @@ task stage {
 
 //This task runs webpack to bundle the frontend to the package folder
 task runWebpack(type: NpmTask) {
-    args = ['run', 'bundle']
+    args = ["run", "bundle"]
 }
 bootRun.dependsOn runWebpack
 runWebpack.dependsOn npm_install
