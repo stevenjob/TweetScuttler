@@ -50,6 +50,6 @@ class ChatEventHandler {
   def onChatEvent(client: SocketIOClient, request: AckRequest, data: ChatObject) {
     server.getBroadcastOperations.sendEvent("chatevent", data)
     listener.statusQueue.clear()
-    streamer.applyFilterAndRun(Array(data.getMessage))
+    streamer.applyFilterAndRun(data.getMessage)
   }
 }
