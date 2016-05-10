@@ -1,6 +1,18 @@
 *.class
 *.log
 
+public/
+
+# intellij
+.idea/
+*.iml
+build/
+
+out
+*.ipr
+*.iws
+.DS_Store
+
 # sbt specific
 .cache
 .history
@@ -15,3 +27,15 @@ project/plugins/project/
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+
+# Gradle
+.gradle
+
+# Eclipse
+.project
+.cache-main
+.settings/
+
+# Frontend
+node_modules/
+/bin/

@@ -1,0 +1,7 @@
+wss.server.port = 9092
+wss.server.host = localhost
+
+auth.consumer.key  = 'Put consumer key here'
+auth.consumer.secret = 'consumer secret'
+auth.token = 'token'
+auth.secret = 'secret'
