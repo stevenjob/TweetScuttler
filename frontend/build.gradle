@@ -1,0 +1,27 @@
+// Communnity plugin via DSL
+plugins {
+    id "com.moowork.node" version "0.12"
+}
+
+//defines a basic project lifecycle
+apply plugin: 'base'
+version '0.2.0'
+
+buildDir = 'dist'
+
+task bundle(type: NpmTask) {
+  //runs 'npm run bundle'
+  args = ['run', 'bundle']
+}
+
+task start(type: NpmTask) {
+  args = ['start']
+}
+
+task test(type: NpmTask) {
+    args = ['test']
+}
+
+check.dependsOn(test)
+bundle.dependsOn(npm_install)
+assemble.dependsOn(bundle)
