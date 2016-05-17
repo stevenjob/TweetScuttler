@@ -5,9 +5,6 @@ plugins {
 
 //defines a basic project lifecycle
 apply plugin: 'base'
-version '0.2.0'
-
-buildDir = 'dist'
 
 task bundle(type: NpmTask) {
   //runs 'npm run bundle'
