@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
 html {
     height: 100%;
@@ -32,7 +32,7 @@ hr {
     to {color: #806E28;}
 }
 
-#main-container {
+#root {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -40,7 +40,7 @@ hr {
     right: 0;
 }
 
-#main {
+#app {
     position: relative;
     max-width: 1140px;
     margin-left: auto;

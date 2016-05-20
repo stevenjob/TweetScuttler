@@ -11,7 +11,7 @@ const ChatComment = (props) => (
 
 ChatComment.propTypes = {
   username: React.PropTypes.string.isRequired,
-  children: React.PropTypes.element,
+  children: React.PropTypes.string,
 };
 
 export default ChatComment;
