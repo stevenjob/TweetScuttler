@@ -1,45 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
 
+@import "modules/all";
+@import "vendor/font-awesome/font-awesome";
+@import "partials/header";
+@import "partials/accountSwitcher";
+
 .chatCommentList {
-    overflow: auto;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  overflow: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .chatCommentList > div {
-    margin-top: 1.5rem;
-    line-height: 2rem;
+  margin-top: 1.5rem;
+  line-height: 2rem;
 }
 
 .time {
-    font-weight: bold;
-    letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .commentUsername {
-    color: orange;
-    font-weight: 600;
+  color: orange;
+  font-weight: 600;
 }
 
 .connect-msg {
-    color: green;
+  color: green;
 }
 
 .disconnect-msg {
-    color: red;
+  color: red;
 }
 
 .send-msg {
-    color: #888;
+  color: #888;
 }
 
 #send {
-    display: none;
+  display: none;
 }
 
 .chatForm input {
-    text-align: center;
-    height: 2.5rem;
-    width: 40rem;
-    font: inherit;
+  text-align: center;
+  height: 2.5rem;
+  width: 40rem;
+  font: inherit;
 }

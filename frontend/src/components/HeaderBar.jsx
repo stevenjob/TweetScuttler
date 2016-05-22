@@ -1,10 +1,12 @@
 import React from 'react';
+import AccountSwitcher from './AccountSwitcher.jsx';
+const logo = require('../../assets/ts.png');
 
 const HeaderBar = () => (
   <div className="header">
-    <img className="logo" src={require('../../assets/ts.png')}/>
+    <img role="presentation" className="logo" src={logo} />
     <h1>Tweet Scuttler</h1>
-    <hr />
+    <AccountSwitcher />
   </div>
 );
 

@@ -1,0 +1,20 @@
+.header {
+  width: 1200px;
+  display: flex;
+  margin: auto;
+  background-color: $primary;
+
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    color: $secondary;
+    font-size: 26px;
+    margin: auto;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .logo {
+    margin: 5px;
+  }
+}
+

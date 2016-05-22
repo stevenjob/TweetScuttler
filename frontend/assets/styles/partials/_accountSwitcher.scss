@@ -1,0 +1,12 @@
+
+.switcherButton {
+  background-color: transparent;
+  border-radius: 8px;
+  min-width: 150px;
+  margin-right: 0;
+  border: none;
+  &::after {
+    font-family: FontAwesome;
+    content: $fa-var-chevron-down;
+  }
+}
