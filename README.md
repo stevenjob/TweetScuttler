@@ -1,9 +1,9 @@
 # TweetScuttler
 
 ## Setup
-#### Clone the repo:
+#### Clone the [repo](https://github.com/stevenjob/TweetScuttler):
 
-`git clone https://github.com/stevenjob/TweetScuttler.git`
+`git clone git@github.com:stevenjob/TweetScuttler.git`
 
 #### Add Twitter credentials to:
 
@@ -20,3 +20,7 @@
 #### You can now navigate to the application at:
 
 `http://localhost:3000/`
+
+#### Run the unit tests with
+
+`./gradlew test`
